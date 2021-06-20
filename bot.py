@@ -56,12 +56,9 @@ def kolbasa(message):
 
 
 def luck(message):
-    if message.text == '/luck':
-        bot.send_message(message.from_user.id, 'Введи событие, вероятность которого ты хочешь узнать')
-        bot.register_next_step_handler(message, probability)
-    else:
-        bot.send_message(message.from_user.id, 'Я тебя не понял, /help')
-
+     bot.send_message(message.from_user.id, 'Введи событие, вероятность которого ты хочешь узнать')
+     bot.register_next_step_handler(message, probability)
+    
 
 def probability(message):
     global rand
@@ -70,33 +67,32 @@ def probability(message):
 
 
 def zodiac(message):
-    if message.text == '/zodiac':
-        keyboard = types.InlineKeyboardMarkup()
-        oven = types.InlineKeyboardButton(text='Овен 21.01-20.04', callback_data='zodiac')
-        keyboard.add(oven)
-        telec = types.InlineKeyboardButton(text='Телец 21.04-20.05', callback_data='zodiac')
-        keyboard.add(telec)
-        blizneci = types.InlineKeyboardButton(text='Близнецы 21.05-20.06', callback_data='zodiac')
-        keyboard.add(blizneci)
-        rak = types.InlineKeyboardButton(text='Рак 21.06-22.07', callback_data='zodiac')
-        keyboard.add(rak)
-        lev = types.InlineKeyboardButton(text='Лев 23.07-22.08', callback_data='zodiac')
-        keyboard.add(lev)
-        deva = types.InlineKeyboardButton(text='Дева 23.08-22.09', callback_data='zodiac')
-        keyboard.add(deva)
-        vesi = types.InlineKeyboardButton(text='Весы 23.09-22.10', callback_data='zodiac')
-        keyboard.add(vesi)
-        skorpion = types.InlineKeyboardButton(text='Скорпион 23.10-22.11', callback_data='zodiac')
-        keyboard.add(skorpion)
-        strelec = types.InlineKeyboardButton(text='Стрелец 23.11-21.12', callback_data='zodiac')
-        keyboard.add(strelec)
-        kozerog = types.InlineKeyboardButton(text='Козерог 22.12-19.01', callback_data='zodiac')
-        keyboard.add(kozerog)
-        vodoley = types.InlineKeyboardButton(text='Водолей 20.01-19.02', callback_data='zodiac')
-        keyboard.add(vodoley)
-        ribi = types.InlineKeyboardButton(text='Рыбы 20.02-20.03', callback_data='zodiac')
-        keyboard.add(ribi)
-        bot.send_message(message.from_user.id, text='Выбери свой знак зодиака', reply_markup=keyboard)
+     keyboard = types.InlineKeyboardMarkup()
+     oven = types.InlineKeyboardButton(text='Овен 21.01-20.04', callback_data='zodiac')
+     keyboard.add(oven)
+     telec = types.InlineKeyboardButton(text='Телец 21.04-20.05', callback_data='zodiac')
+     keyboard.add(telec)
+     blizneci = types.InlineKeyboardButton(text='Близнецы 21.05-20.06', callback_data='zodiac')
+     keyboard.add(blizneci)
+     rak = types.InlineKeyboardButton(text='Рак 21.06-22.07', callback_data='zodiac')
+     keyboard.add(rak)
+     lev = types.InlineKeyboardButton(text='Лев 23.07-22.08', callback_data='zodiac')
+     keyboard.add(lev)
+     deva = types.InlineKeyboardButton(text='Дева 23.08-22.09', callback_data='zodiac')
+     keyboard.add(deva)
+     vesi = types.InlineKeyboardButton(text='Весы 23.09-22.10', callback_data='zodiac')
+     keyboard.add(vesi)
+     skorpion = types.InlineKeyboardButton(text='Скорпион 23.10-22.11', callback_data='zodiac')
+     keyboard.add(skorpion)
+     strelec = types.InlineKeyboardButton(text='Стрелец 23.11-21.12', callback_data='zodiac')
+     keyboard.add(strelec)
+     kozerog = types.InlineKeyboardButton(text='Козерог 22.12-19.01', callback_data='zodiac')
+     keyboard.add(kozerog)
+     vodoley = types.InlineKeyboardButton(text='Водолей 20.01-19.02', callback_data='zodiac')
+     keyboard.add(vodoley)
+     ribi = types.InlineKeyboardButton(text='Рыбы 20.02-20.03', callback_data='zodiac')
+     keyboard.add(ribi)
+     bot.send_message(message.from_user.id, text='Выбери свой знак зодиака', reply_markup=keyboard)
 
 
 a = ['Вы способны на многое. Едва ли на пути возникнут преграды, которые вы не сможете преодолеть.',
